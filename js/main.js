@@ -16,12 +16,13 @@ function getFetch(){
         console.log(data)
         if( data.media_type === 'image' ){
           document.querySelector('.nasaImg').src = data.hdurl
-          document.querySelector('iframe').src = ''
+          document.querySelector('iframe').style.display = 'none'
      
   
         }else if(data.media_type === 'video'){
           document.querySelector('iframe').src = data.url
-          document.querySelector('.nasaImg').src = ''
+          document.querySelector('.nasaImg').style.display = 'none'
+          document.querySelector('.nasaVid').style.display = 'flex'
 
         }
        
